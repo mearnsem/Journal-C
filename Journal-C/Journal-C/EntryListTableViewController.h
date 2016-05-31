@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EntryListTableViewController.h
 //  Journal-C
 //
 //  Created by Emily Mearns on 5/31/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface EntryListTableViewController : UITableViewController
 
 @end
-

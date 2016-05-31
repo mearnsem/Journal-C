@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		40D214751CFE230400926330 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D214741CFE230400926330 /* main.m */; };
 		40D214781CFE230400926330 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D214771CFE230400926330 /* AppDelegate.m */; };
-		40D2147B1CFE230400926330 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2147A1CFE230400926330 /* ViewController.m */; };
 		40D2147E1CFE230400926330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40D2147C1CFE230400926330 /* Main.storyboard */; };
 		40D214801CFE230400926330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40D2147F1CFE230400926330 /* Assets.xcassets */; };
 		40D214831CFE230400926330 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40D214811CFE230400926330 /* LaunchScreen.storyboard */; };
+		40D2148C1CFE234500926330 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2148B1CFE234500926330 /* Entry.m */; };
+		40D214901CFE251F00926330 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2148F1CFE251F00926330 /* EntryController.m */; };
+		40D214941CFE290A00926330 /* EntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D214931CFE290A00926330 /* EntryListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,16 @@
 		40D214741CFE230400926330 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40D214761CFE230400926330 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		40D214771CFE230400926330 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		40D214791CFE230400926330 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		40D2147A1CFE230400926330 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		40D2147D1CFE230400926330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40D2147F1CFE230400926330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40D214821CFE230400926330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40D214841CFE230400926330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40D2148A1CFE234500926330 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		40D2148B1CFE234500926330 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		40D2148E1CFE251F00926330 /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
+		40D2148F1CFE251F00926330 /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
+		40D214921CFE290A00926330 /* EntryListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListTableViewController.h; sourceTree = "<group>"; };
+		40D214931CFE290A00926330 /* EntryListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,12 @@
 		40D214721CFE230400926330 /* Journal-C */ = {
 			isa = PBXGroup;
 			children = (
+				40D2147C1CFE230400926330 /* Main.storyboard */,
+				40D2148D1CFE250700926330 /* Model Object */,
+				40D214911CFE252500926330 /* Controllers */,
+				40D214951CFE291000926330 /* View Controllers */,
 				40D214761CFE230400926330 /* AppDelegate.h */,
 				40D214771CFE230400926330 /* AppDelegate.m */,
-				40D214791CFE230400926330 /* ViewController.h */,
-				40D2147A1CFE230400926330 /* ViewController.m */,
-				40D2147C1CFE230400926330 /* Main.storyboard */,
 				40D2147F1CFE230400926330 /* Assets.xcassets */,
 				40D214811CFE230400926330 /* LaunchScreen.storyboard */,
 				40D214841CFE230400926330 /* Info.plist */,
@@ -77,6 +84,33 @@
 				40D214741CFE230400926330 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		40D2148D1CFE250700926330 /* Model Object */ = {
+			isa = PBXGroup;
+			children = (
+				40D2148A1CFE234500926330 /* Entry.h */,
+				40D2148B1CFE234500926330 /* Entry.m */,
+			);
+			name = "Model Object";
+			sourceTree = "<group>";
+		};
+		40D214911CFE252500926330 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				40D2148E1CFE251F00926330 /* EntryController.h */,
+				40D2148F1CFE251F00926330 /* EntryController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		40D214951CFE291000926330 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				40D214921CFE290A00926330 /* EntryListTableViewController.h */,
+				40D214931CFE290A00926330 /* EntryListTableViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40D2147B1CFE230400926330 /* ViewController.m in Sources */,
+				40D214901CFE251F00926330 /* EntryController.m in Sources */,
+				40D2148C1CFE234500926330 /* Entry.m in Sources */,
 				40D214781CFE230400926330 /* AppDelegate.m in Sources */,
 				40D214751CFE230400926330 /* main.m in Sources */,
+				40D214941CFE290A00926330 /* EntryListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
