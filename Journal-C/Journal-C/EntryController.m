@@ -19,6 +19,14 @@
     return sharedInstance;
 }
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.entries = [NSMutableArray new];
+    }
+    return self;
+}
+
 - (void)addEntry:(Entry *)entry {
     [self.entries addObject:entry];
 }

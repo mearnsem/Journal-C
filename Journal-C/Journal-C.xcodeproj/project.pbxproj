@@ -15,6 +15,7 @@
 		40D2148C1CFE234500926330 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2148B1CFE234500926330 /* Entry.m */; };
 		40D214901CFE251F00926330 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D2148F1CFE251F00926330 /* EntryController.m */; };
 		40D214941CFE290A00926330 /* EntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D214931CFE290A00926330 /* EntryListTableViewController.m */; };
+		40D214981CFE2F7900926330 /* EntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D214971CFE2F7900926330 /* EntryDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		40D2148F1CFE251F00926330 /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
 		40D214921CFE290A00926330 /* EntryListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListTableViewController.h; sourceTree = "<group>"; };
 		40D214931CFE290A00926330 /* EntryListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListTableViewController.m; sourceTree = "<group>"; };
+		40D214961CFE2F7900926330 /* EntryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryDetailViewController.h; sourceTree = "<group>"; };
+		40D214971CFE2F7900926330 /* EntryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 		40D214951CFE291000926330 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				40D214961CFE2F7900926330 /* EntryDetailViewController.h */,
+				40D214971CFE2F7900926330 /* EntryDetailViewController.m */,
 				40D214921CFE290A00926330 /* EntryListTableViewController.h */,
 				40D214931CFE290A00926330 /* EntryListTableViewController.m */,
 			);
@@ -183,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D214981CFE2F7900926330 /* EntryDetailViewController.m in Sources */,
 				40D214901CFE251F00926330 /* EntryController.m in Sources */,
 				40D2148C1CFE234500926330 /* Entry.m in Sources */,
 				40D214781CFE230400926330 /* AppDelegate.m in Sources */,

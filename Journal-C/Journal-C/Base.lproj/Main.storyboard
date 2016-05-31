@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Entry List Table View Controller-->
@@ -21,6 +22,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="sgN-iV-xWj" kind="show" identifier="toViewEntry" id="rWZ-t7-RiN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,7 +35,7 @@
                     <navigationItem key="navigationItem" id="vmi-ty-sAa">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uLi-DS-eET">
                             <connections>
-                                <action selector="addButtonTapped:" destination="vOP-nI-nqV" id="NKC-Nb-DDz"/>
+                                <segue destination="sgN-iV-xWj" kind="show" identifier="toAddEntry" id="qNs-yG-IL3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -39,6 +43,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZ3-MO-XWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1397" y="122"/>
+        </scene>
+        <!--Entry Detail View Controller-->
+        <scene sceneID="48X-6S-bpn">
+            <objects>
+                <viewController id="sgN-iV-xWj" customClass="EntryDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jSy-9C-nCj"/>
+                        <viewControllerLayoutGuide type="bottom" id="l8X-HK-lYB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GXj-IK-SYX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edH-AB-60g">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sgN-iV-xWj" id="M0X-ZM-ueG"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write your entry here... " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sz2-ve-2lZ">
+                                <rect key="frame" x="20" y="110" width="560" height="432"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImO-Yw-4yV">
+                                <rect key="frame" x="266" y="550" width="69" height="30"/>
+                                <state key="normal" title="Clear Text"/>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="sgN-iV-xWj" eventType="touchUpInside" id="RHU-WP-Fkd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="edH-AB-60g" firstAttribute="trailing" secondItem="GXj-IK-SYX" secondAttribute="trailingMargin" id="75V-O2-CXd"/>
+                            <constraint firstItem="Sz2-ve-2lZ" firstAttribute="top" secondItem="edH-AB-60g" secondAttribute="bottom" constant="8" id="AQN-NU-DtM"/>
+                            <constraint firstItem="Sz2-ve-2lZ" firstAttribute="trailing" secondItem="GXj-IK-SYX" secondAttribute="trailingMargin" id="EeB-XC-CnQ"/>
+                            <constraint firstItem="ImO-Yw-4yV" firstAttribute="top" secondItem="Sz2-ve-2lZ" secondAttribute="bottom" constant="8" id="GMB-QA-Mhm"/>
+                            <constraint firstItem="Sz2-ve-2lZ" firstAttribute="leading" secondItem="GXj-IK-SYX" secondAttribute="leadingMargin" id="Glw-TQ-gaO"/>
+                            <constraint firstItem="edH-AB-60g" firstAttribute="top" secondItem="jSy-9C-nCj" secondAttribute="bottom" constant="8" id="K3H-1e-mQw"/>
+                            <constraint firstItem="edH-AB-60g" firstAttribute="leading" secondItem="GXj-IK-SYX" secondAttribute="leadingMargin" id="KbX-DG-bpX"/>
+                            <constraint firstItem="ImO-Yw-4yV" firstAttribute="centerX" secondItem="GXj-IK-SYX" secondAttribute="centerX" id="Yon-1w-f6k"/>
+                            <constraint firstItem="l8X-HK-lYB" firstAttribute="top" secondItem="ImO-Yw-4yV" secondAttribute="bottom" constant="20" id="mWI-Vr-GBT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UC3-e7-zG2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="L0w-CZ-6tC">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="sgN-iV-xWj" id="pSy-la-xjc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="entryBodyTextView" destination="Sz2-ve-2lZ" id="Ohr-aV-0MU"/>
+                        <outlet property="entryTitleTextField" destination="edH-AB-60g" id="KWk-5A-RDX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvn-BU-WcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056" y="122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dWt-JW-aVo">
@@ -59,4 +126,7 @@
             <point key="canvasLocation" x="732" y="122"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rWZ-t7-RiN"/>
+    </inferredMetricsTieBreakers>
 </document>
