@@ -14,6 +14,10 @@
 @property (nonatomic, strong) NSString *bodyText;
 @property (nonatomic, strong) NSDate *timestamp;
 
+
+
 - (instancetype)initWithTitle:(NSString *)title andBodyText:(NSString *)bodyText andTimestamp:(NSDate *)timestamp;
+
+
 
 @end

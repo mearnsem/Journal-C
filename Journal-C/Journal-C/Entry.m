@@ -10,6 +10,10 @@
 
 @implementation Entry
 
+static NSString const *timestampKey = @"timestamp";
+static NSString const *titleKey = @"title";
+static NSString const *bodyTextKey = @"bodytext";
+
 - (instancetype)initWithTitle:(NSString *)title andBodyText:(NSString *)bodyText andTimestamp:(NSDate *)timestamp {
     self= [super init];
     if (self) {
@@ -19,5 +23,7 @@
     }
     return self;
 }
+
+
 
 @end
